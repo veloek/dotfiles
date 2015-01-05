@@ -6,3 +6,5 @@
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
+[push]
+	default = simple
