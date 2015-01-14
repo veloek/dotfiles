@@ -190,3 +190,8 @@ nmap <leader>b :b#<cr>
 " Close current buffer (and keep vsplit)
 nmap <leader>c :bd<cr>:vsplit<cr>:wincmd l<cr>:bn<cr>
 
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
