@@ -13,7 +13,7 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
 
@@ -42,30 +42,30 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
+"if has('mouse')
+"  set mouse=a
+"endif
 
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -76,7 +76,7 @@ set t_vb=
 set tm=500
 
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 try
     colorscheme desert
@@ -117,9 +117,6 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
-
-" Disable highlight when <esc> is pressed
-nmap <esc> :noh<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
