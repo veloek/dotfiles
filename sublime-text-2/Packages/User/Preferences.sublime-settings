@@ -1,0 +1,22 @@
+{
+	"auto_complete_commit_on_tab": false,
+	"color_scheme": "Packages/Theme - VisualStudio/VisualStudio Dark.tmTheme",
+	"draw_minimap_border": true,
+	"font_face": "Source Code Pro Medium",
+	"font_size": 16,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"margin": 0,
+	"rulers":
+	[
+		80
+	],
+	"word_separators": "./\\()\"'-_:,.;<>~!@#$%^&*|+=[]{}`~?"
+}
