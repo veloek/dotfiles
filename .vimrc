@@ -114,9 +114,36 @@ set wrap "Wrap lines
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
+function! VisualSelection(direction, extra_filter) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("Ack \"" . l:pattern . "\" " )
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
+
+" Clear highlighted search results
+nmap <Leader><esc> :noh<cr>
+
+" Map F4 to escape for easier access to normal mode
+imap <f4> <esc>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -153,36 +180,15 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
-" Remove the Windows ^M - when the encodings gets messed up
+" Remove the Windows ^M - when rhe encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-
-function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("Ack \"" . l:pattern . "\" " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
 
 " Add a bit extra margin to the left
 set foldcolumn=1
 
 " Page up/down
-nmap <C-j> <C-f>
-nmap <C-k> <C-b>
+"nmap <C-j> <C-f>
+"nmap <C-k> <C-b>
 
 " Previously edited buffer
 nmap <leader>b :b#<cr>
@@ -194,4 +200,3 @@ nmap <leader>c :bd<cr>:vsplit<cr>:wincmd l<cr>:bn<cr>
 set nobackup
 set nowb
 set noswapfile
-
