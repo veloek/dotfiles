@@ -3,6 +3,9 @@
 	br = branch
 	ch = checkout
 	ci = commit
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
+[push]
+	default = simple
