@@ -200,3 +200,7 @@ nmap <leader>c :bd<cr>:vsplit<cr>:wincmd l<cr>:bn<cr>
 set nobackup
 set nowb
 set noswapfile
+
+" Show vertical ruler at col 80
+set colorcolumn=80
+highlight ColorColumn ctermbg=0
