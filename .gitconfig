@@ -11,3 +11,4 @@
 	default = current
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
