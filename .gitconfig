@@ -9,3 +9,5 @@
 	email = vegard@loekken.org
 [push]
 	default = current
+[core]
+	editor = vim
