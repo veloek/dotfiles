@@ -4,6 +4,8 @@
 	ch = checkout
 	ci = commit
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	unmerge = reset --merge ORIG_HEAD
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
