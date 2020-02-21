@@ -1,3 +1,6 @@
+" Pathogen packages
+execute pathogen#infect()
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -9,6 +12,9 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
+
+" Color theme
+colorscheme koehler
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -78,13 +84,6 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-try
-    colorscheme desert
-catch
-endtry
-
-set background=dark
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -106,7 +105,7 @@ set lbr
 set tw=500
 
 set ai "Auto indent
-set si "Smart indent
+"set si "Smart indent
 set wrap "Wrap lines
 
 " Visual mode pressing * or # searches for the current selection
@@ -141,9 +140,6 @@ map k gk
 
 " Clear highlighted search results
 nmap <Leader><esc> :noh<cr>
-
-" Map F4 to escape for easier access to normal mode
-imap <f4> <esc>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -184,7 +180,7 @@ autocmd BufWrite * :call DeleteTrailingWS()
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+" set foldcolumn=1
 
 " Page up/down
 "nmap <C-j> <C-f>
@@ -201,6 +197,40 @@ set nobackup
 set nowb
 set noswapfile
 
-" Show vertical ruler at col 80
-set colorcolumn=80
-highlight ColorColumn ctermbg=0
+" Set ruler color
+highlight ColorColumn ctermbg=LightGrey
+
+" Dampen the color of line numbers
+highlight LineNr ctermfg=LightGrey
+
+" Do vertical split for new windows
+set splitbelow
+
+" Vim-go specific settings
+let g:go_fmt_command="goimports"
+let g:go_highlight_types=1
+"let g:go_highlight_function_calls=1
+let g:go_highlight_function_arguments=1
+let g:go_highlight_functions=1
+
+" Show line numbers
+set number
+set relativenumber
+
+" Show filename in status bar
+set laststatus=2
+
+" Git commit settings
+augroup git_settings
+    autocmd!
+    " Wrap text at 72 cols
+    autocmd FileType gitcommit set textwidth=72
+    " Show vertical ruler at textwidth+1
+    autocmd FileType gitcommit set colorcolumn=51,73
+augroup END
+
+" Show ruler at 81 cols for selected file types
+augroup ruler_settings
+    autocmd!
+    autocmd FileType c,go set colorcolumn=81
+augroup END
