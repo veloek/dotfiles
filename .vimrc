@@ -198,7 +198,7 @@ set nowb
 set noswapfile
 
 " Set ruler color
-highlight ColorColumn ctermbg=LightGrey
+highlight ColorColumn ctermbg=DarkGrey
 
 " Dampen the color of line numbers
 highlight LineNr ctermfg=LightGrey
