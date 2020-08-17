@@ -7,7 +7,7 @@
 	unmerge = reset --merge ORIG_HEAD
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 	log-remote-changes = log ..FETCH_HEAD
-	forward = merge --ff-only FETCH_HEAD
+	fforward = merge --ff-only FETCH_HEAD
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
