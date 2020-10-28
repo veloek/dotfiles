@@ -1,0 +1,34 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 0,
+    "editor.smoothScrolling": true,
+    "explorer.autoReveal": false,
+    "scm.autoReveal": false,
+    "editor.fontSize": 14,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.defaultDateFormat": "DD.MM.YYYY HH:mm",
+    "gitlens.defaultDateShortFormat": "D/M YYYY",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "eslint.codeActionsOnSave.mode": "problems",
+    "terminal.integrated.macOptionIsMeta": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.currentLine.enabled": false,
+    "javascript.preferences.quoteStyle": "double",
+    "typescript.preferences.quoteStyle": "double",
+    "editor.suggest.showWords": false,
+    "go.formatTool": "goimports",
+    "editor.parameterHints.enabled": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true
+}
