@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+cmd+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "alt+cmd+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+alt+cmd+=",
+        "command": "editor.action.fontZoomReset"
+    }
+]
