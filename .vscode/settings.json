@@ -30,5 +30,8 @@
     "editor.parameterHints.enabled": false,
     "editor.suggestOnTriggerCharacters": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "window.restoreWindows": "none"
 }
