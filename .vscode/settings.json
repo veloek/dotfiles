@@ -33,5 +33,8 @@
     "files.trimTrailingWhitespace": true,
     "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
     "omnisharp.enableRoslynAnalyzers": true,
-    "window.restoreWindows": "none"
+    "window.restoreWindows": "none",
+    "window.menuBarVisibility": "toggle",
+    "files.insertFinalNewline": true,
+    "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}"
 }
