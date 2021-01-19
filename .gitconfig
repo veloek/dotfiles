@@ -17,3 +17,5 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 	autocrlf = input
+[pull]
+	rebase = false
