@@ -5,9 +5,9 @@
 	ci = commit
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 	unmerge = reset --merge ORIG_HEAD
-	new = !git log $1@{1}..$1@{0} $@
-	log-remote-changes = !git log ..$(git rev-parse --abbrev-ref --symbolic-full-name @{u}) $@
-	fforward = !git merge --ff-only $(git rev-parse --abbrev-ref --symbolic-full-name @{u}) $@
+	new = !git log @{1}..@{0}
+	log-remote-changes = !git log ..$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+	fforward = !git merge --ff-only $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
 	standup = !git log --author=\"$(git config --get user.name)\" --since=\"$([[ "1" == "$(date +%u)" ]] && echo last friday.midnight || echo yesterday.midnight)\"
 [user]
 	name = Vegard Løkken
