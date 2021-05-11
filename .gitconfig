@@ -3,6 +3,7 @@
 	br = branch
 	ch = checkout
 	ci = commit
+	wt = worktree
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 	unmerge = reset --merge ORIG_HEAD
 	new = !git log @{1}..@{0}
