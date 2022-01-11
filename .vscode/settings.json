@@ -36,5 +36,13 @@
     "window.restoreWindows": "none",
     "window.menuBarVisibility": "toggle",
     "files.insertFinalNewline": true,
-    "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}"
+    "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "ø": true,
+        "Ø": true,
+        "æ": true,
+        "Æ": true,
+        "å": true,
+        "Å": true,
+    },
 }
