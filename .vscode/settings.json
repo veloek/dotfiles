@@ -17,10 +17,10 @@
     "eslint.codeActionsOnSave.mode": "problems",
     "terminal.integrated.macOptionIsMeta": true,
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     },
     "gitlens.currentLine.enabled": false,
     "javascript.preferences.quoteStyle": "double",
@@ -37,6 +37,7 @@
     "window.menuBarVisibility": "toggle",
     "files.insertFinalNewline": true,
     "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
+    "editor.accessibilitySupport": "off",
     "editor.unicodeHighlight.allowedCharacters": {
         "ø": true,
         "Ø": true,
@@ -45,4 +46,13 @@
         "å": true,
         "Å": true,
     },
+    "omnisharp.useModernNet": true,
+    "window.nativeTabs": true,
+    "files.exclude": {
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
+    },
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly"
 }
