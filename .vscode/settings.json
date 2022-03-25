@@ -54,5 +54,6 @@
       "**/.settings": true,
       "**/.factorypath": true
     },
-    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly"
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "editor.guides.bracketPairs": "active"
 }
