@@ -16,11 +16,12 @@
     },
     "eslint.codeActionsOnSave.mode": "problems",
     "terminal.integrated.macOptionIsMeta": true,
+    "eslint.format.enable": true,
     "[typescriptreact]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "gitlens.currentLine.enabled": false,
     "javascript.preferences.quoteStyle": "double",
@@ -49,10 +50,10 @@
     "omnisharp.useModernNet": true,
     "window.nativeTabs": true,
     "files.exclude": {
-      "**/.classpath": true,
-      "**/.project": true,
-      "**/.settings": true,
-      "**/.factorypath": true
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "editor.guides.bracketPairs": "active"
