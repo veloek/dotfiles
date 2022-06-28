@@ -1,6 +1,5 @@
 {
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.sideBar.location": "right",
     "window.zoomLevel": 0,
