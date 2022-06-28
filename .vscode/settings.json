@@ -49,6 +49,7 @@
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.macOptionIsMeta": true,
     "typescript.preferences.quoteStyle": "double",
+    "typescript.referencesCodeLens.enabled": true,
     "window.nativeTabs": true,
     "window.restoreWindows": "none",
     "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
