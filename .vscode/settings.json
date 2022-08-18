@@ -1,21 +1,16 @@
 {
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.accessibilitySupport": "off",
     "editor.fontSize": 14,
     "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": true,
+    "editor.minimap.showSlider": "always",
     "editor.parameterHints.enabled": false,
+    "editor.renderWhitespace": "boundary",
     "editor.smoothScrolling": true,
     "editor.suggest.showWords": false,
     "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestSelection": "first",
     "editor.unicodeHighlight.allowedCharacters": {
         "ø": true,
         "Ø": true,
@@ -28,6 +23,8 @@
     "eslint.codeActionsOnSave.mode": "problems",
     "eslint.format.enable": true,
     "explorer.autoReveal": false,
+    "explorer.compactFolders": false,
+    "extensions.ignoreRecommendations": true,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -41,19 +38,36 @@
     "gitlens.defaultDateShortFormat": "D/M YYYY",
     "gitlens.hovers.currentLine.over": "line",
     "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
     "javascript.preferences.quoteStyle": "double",
+    "keyboard.dispatch": "keyCode",
     "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
     "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.organizeImportsOnFormat": true,
     "omnisharp.useModernNet": true,
     "scm.autoReveal": false,
     "telemetry.telemetryLevel": "off",
+    "terminal.integrated.env.linux": {
+        "TERM": "xterm"
+    },
     "terminal.integrated.macOptionIsMeta": true,
     "typescript.preferences.quoteStyle": "double",
     "typescript.referencesCodeLens.enabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.useCtrlKeys": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.menuBarVisibility": "toggle",
     "window.nativeTabs": true,
     "window.restoreWindows": "none",
     "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
     "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "sideBar.background": "#000000"
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
 }
