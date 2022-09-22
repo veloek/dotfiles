@@ -24,3 +24,5 @@
 	autocrlf = input
 [pull]
 	rebase = false
+[diff]
+	wsErrorHighlight = all
