@@ -19,6 +19,8 @@
         "å": true,
         "Å": true,
     },
+    "editor.unicodeHighlight.includeComments": true,
+    "editor.unicodeHighlight.nonBasicASCII": true,
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "eslint.codeActionsOnSave.mode": "problems",
     "eslint.format.enable": true,
