@@ -32,12 +32,12 @@ keyboard_layout() {
 
 # Print song currently playing
 now_playing() {
-    PLAYER=`playerctl --ignore-player=chromium metadata --format '{{playerName}}' |tr [:lower:] [:upper:]`
-    TITLE=`playerctl --ignore-player=chromium metadata --format '{{title}}'`
-    ARTIST=`playerctl --ignore-player=chromium metadata --format '{{artist}}'`
-    STATUS=`playerctl --ignore-player=chromium metadata --format '{{status}}'`
-    #PROGRESS=`echo $(playerctl metadata --ignore-player=chromium --format '{{position*100/mpris:length}}'/1 |bc) %`
-    PROGRESS=`playerctl metadata --ignore-player=chromium --format '{{duration(position)}}/{{duration(mpris:length)}}'`
+    PLAYER=`playerctl --ignore-player=chromium metadata --format '{{playerName}}' 2> /dev/null |tr [:lower:] [:upper:]`
+    TITLE=`playerctl --ignore-player=chromium metadata --format '{{title}}' 2> /dev/null`
+    ARTIST=`playerctl --ignore-player=chromium metadata --format '{{artist}}' 2> /dev/null`
+    STATUS=`playerctl --ignore-player=chromium metadata --format '{{status}}' 2> /dev/null`
+    #PROGRESS=`echo $(playerctl metadata --ignore-player=chromium --format '{{position*100/mpris:length}}'/1 2> /dev/null |bc) %`
+    PROGRESS=`playerctl metadata --ignore-player=chromium --format '{{duration(position)}}/{{duration(mpris:length)}}' 2> /dev/null`
 
     if [ -n "$STATUS" ]
     then
