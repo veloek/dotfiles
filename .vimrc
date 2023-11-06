@@ -14,7 +14,8 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Color theme
-colorscheme koehler
+colorscheme pablo
+
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -234,3 +235,7 @@ augroup ruler_settings
     autocmd!
     autocmd FileType c,go set colorcolumn=81
 augroup END
+
+" Toggle on/off background to fix theme colors
+set background=light
+set background=dark
