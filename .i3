@@ -215,6 +215,11 @@ exec --no-startup-id feh --bg-scale Pictures/wp8018051.jpg
 #exec --no-startup-id setxkbmap -layout us,no -variant altgr-intl -option 'caps:escape,compose:ralt'
 #exec --no-startup-id xmodmap -e "keysym Alt_R = Multi_key"
 
+# This would normally be applied by udev rule 10-contour-mapping.rules
+# but since udev runs before X is started, it cannot configure xinput.
+# So the udev rule works on usb hotplug, but not on initial boot.
+exec --no-startup-id /etc/udev/contour.sh
+
 # Change keyboard layout and restart i3status to reflect change immediately
 bindsym Mod4+space exec --no-startup-id "xkb-switch -n; pkill -x --signal=SIGUSR1 i3status"
 
