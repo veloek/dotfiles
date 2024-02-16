@@ -17,7 +17,7 @@
         "æ": true,
         "Æ": true,
         "å": true,
-        "Å": true,
+        "Å": true
     },
     "editor.unicodeHighlight.includeComments": true,
     "editor.unicodeHighlight.nonBasicASCII": true,
@@ -34,6 +34,7 @@
         "**/.factorypath": true
     },
     "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "gitlens.currentLine.enabled": false,
     "gitlens.defaultDateFormat": "DD.MM.YYYY HH:mm",
@@ -50,7 +51,7 @@
     "scm.autoReveal": false,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.env.linux": {
-        "TERM": "xterm"
+        "TERM": "xterm-256color"
     },
     "terminal.integrated.macOptionIsMeta": true,
     "typescript.preferences.quoteStyle": "double",
@@ -72,4 +73,13 @@
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "files.trimTrailingWhitespace": false
+    }
 }
