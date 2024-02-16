@@ -193,7 +193,7 @@ nmap <leader>b :b#<cr>
 " Close current buffer (and keep vsplit)
 nmap <leader>c :bd<cr>:vsplit<cr>:wincmd l<cr>:bn<cr>
 
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowb
 set noswapfile
@@ -213,6 +213,12 @@ let g:go_highlight_types=1
 "let g:go_highlight_function_calls=1
 let g:go_highlight_function_arguments=1
 let g:go_highlight_functions=1
+let g:go_imports_autosave=1
+let g:go_imports_mode='goimports'
+
+" Vim-OmniSharp specific settings
+"let g:OmniSharp_server_use_mono=1
+"let g:OmniSharp_server_use_net6=1
 
 " Show line numbers
 set number
@@ -236,6 +242,29 @@ augroup ruler_settings
     autocmd FileType c,go set colorcolumn=81
 augroup END
 
+" Disable automatic comment continuation on next line
+autocmd FileType * set formatoptions-=cro
+
+" Mark trailing spaces as errors
+match IncSearch '\s\+$'
+
 " Toggle on/off background to fix theme colors
 set background=light
 set background=dark
+
+" FZF setup
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git -o -name bin -o -name obj \) -prune -o -print'
+set rtp+=/opt/homebrew/opt/fzf
+nmap <leader><leader> :FZF<cr>
+
+" Tabs
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
