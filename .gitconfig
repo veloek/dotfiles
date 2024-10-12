@@ -15,6 +15,8 @@
 	up = "!f() { git update-ref refs/heads/$1 refs/remotes/${2:-origin}/$1; }; f"
 	ignore = update-index --skip-worktree
 	unignore = update-index --no-skip-worktree
+	fix = commit --amend --no-edit
+	fpush = push --force-with-lease
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
