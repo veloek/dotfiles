@@ -1,5 +1,6 @@
 [alias]
 	st = status
+	# List brances with last commit sha sorted by date
 	br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	ch = checkout
 	ci = commit
@@ -7,12 +8,19 @@
 	cp = cherry-pick
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 	unmerge = reset --merge ORIG_HEAD
+	# List commits since before pulling remote
 	new = !git log @{1}..@{0}
+	# List upstream/remote commits not yet merged into local branch
 	log-remote-changes = !git log ..$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+	# Merge upstream/remote branch into local
 	fforward = !git merge --ff-only $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+	# List commits from last workday to trigger memory at standup
 	standup = !git log --author=\"$(git config --get user.name)\" --since=\"$([[ "1" == "$(date +%u)" ]] && echo last friday.midnight || echo yesterday.midnight)\"
+	# Amend a previous commit with staged changes
 	fixup = "!sh -c '(git diff-files --quiet || (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git -c sequence.editor=: rebase -i --autosquash $COMMIT~1' -"
+	# Update a local branch (other than the one currently checked out) to its remote
 	up = "!f() { git update-ref refs/heads/$1 refs/remotes/${2:-origin}/$1; }; f"
+	# Ignore changes to a tracked file
 	ignore = update-index --skip-worktree
 	unignore = update-index --no-skip-worktree
 	fix = commit --amend --no-edit
