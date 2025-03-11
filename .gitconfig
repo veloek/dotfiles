@@ -25,6 +25,8 @@
 	unignore = update-index --no-skip-worktree
 	fix = commit --amend --no-edit
 	fpush = push --force-with-lease
+	# Print tags sorted by semver descending (use with annotated tags)
+	changelog = tag --list --sort=-v:refname --format=%23%20%(contents:subject)%0a%0a%(contents:body)
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
