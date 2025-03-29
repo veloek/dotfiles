@@ -30,6 +30,13 @@
 [user]
 	name = Vegard Løkken
 	email = vegard@loekken.org
+	signingkey = ~/.ssh/id_ed25519.pub
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[gpg]
+	format = ssh
 [push]
 	default = current
 [core]
