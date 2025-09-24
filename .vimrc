@@ -136,8 +136,8 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 " Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
+nnoremap j gj
+nnoremap k gk
 
 " Clear highlighted search results
 nmap <Leader><esc> :noh<cr>
