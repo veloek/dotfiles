@@ -268,3 +268,51 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
+
+" Pairing braces
+"inoremap <> <><Left>
+"inoremap () ()<Left>
+"inoremap {} {}<Left>
+"inoremap [] []<Left>
+"inoremap "" ""<Left>
+"inoremap '' ''<Left>
+"inoremap `` ``<Left>
+
+" Navigational keys
+nmap <Up>    <Nop>
+nmap <Down>  <Nop>
+nmap <Left>  <Nop>
+nmap <Right> <Nop>
+map $ <Nop>
+map ^ <Nop>
+map { <Nop>
+map } <Nop>
+noremap K     {
+noremap J     }
+noremap H     ^
+noremap L     $
+noremap <C-x> :bp<Bar>bd #<Cr>
+
+" Insert mode navigational keys
+imap <Up>    <Nop>
+imap <Down>  <Nop>
+imap <Left>  <Nop>
+imap <Right> <Nop>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+" Tab and Shift-Tab to indent and de-indent
+nmap >> <Nop>
+nmap << <Nop>
+vmap >> <Nop>
+vmap << <Nop>
+nnoremap <Tab>   >>
+nnoremap <S-Tab> <<
+vnoremap <Tab>   >><Esc>gv
+vnoremap <S-Tab> <<<Esc>gv
+
+" Avoiding the Esc key
+inoremap jj <Esc>
+onoremap jj <Esc>
