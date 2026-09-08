@@ -14,10 +14,19 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.quickOpen",
-        "when": "!terminal.active"
+        "when": "!terminalFocusInAny"
     },
     {
         "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocusInAny"
+    },
+    {
+        "key": "ctrl+e",
         "command": "-workbench.action.quickOpen"
     }
 ]
